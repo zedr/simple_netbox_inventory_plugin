@@ -13,6 +13,8 @@ DOCUMENTATION = '''
 ---
 module: netbox_devices
 
+plugin_type: inventory
+
 short_description: An example inventory module for NetBox for querying devices
 
 version_added: "2.4"
@@ -49,7 +51,7 @@ from ansible.plugins.inventory import BaseInventoryPlugin
 
 class InventoryModule(BaseInventoryPlugin):
     """The Inventory Module for querying NetBox Devices."""
-    NAME = 'netbox_devices'
+    NAME = 'zedr.simple_netbox_inventory_plugin.netbox_devices'
 
     def verify_file(self, path):
         return True

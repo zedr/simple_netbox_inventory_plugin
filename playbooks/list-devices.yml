@@ -1,6 +1,0 @@
-- hosts: localhost
-  collections:
-    - zedr.simple_netbox_inventory_plugin
-  tasks:
-    - netbox_devices:
-        netbox_auth_token: foo
