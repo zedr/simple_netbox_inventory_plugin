@@ -174,7 +174,7 @@ class NetBoxInventory(object):
         next_path = self.entity_type.api_url
         while next_path:
             response = self.client.get(next_path)
-            if response.status == '200':
+            if response.status == 200:
                 data = json.load(response)
                 next_path = data.get('next', None)
                 for item in data['results']:
