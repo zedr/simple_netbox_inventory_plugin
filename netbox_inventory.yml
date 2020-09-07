@@ -1,1 +1,3 @@
 plugin: "zedr.simple_netbox_inventory_plugin.netbox_devices"
+netbox_auth_token: "f00b4"
+netbox_host_url: "http://netbox.local"

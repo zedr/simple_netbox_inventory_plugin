@@ -63,5 +63,11 @@ class InventoryModule(BaseInventoryPlugin):
             path,
             cache=cache
         )
+        self._read_config_data(path=path)
         self.use_cache = cache
         self.inventory = inventory
+        self.netbox_auth_token = token = self.get_option('netbox_auth_token')
+        self.netbox_host_url = self.get_option('netbox_host_url')
+
+        self.inventory.add_host('rigel')
+        self.inventory.set_variable('rigel', 'ansible_host', token)
